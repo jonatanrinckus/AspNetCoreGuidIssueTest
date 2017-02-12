@@ -1,0 +1,15 @@
+﻿@model AspNetCoreGuidIssueTest.Models.Test
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<h2>title</h2>
+<div>
+    <form>
+        <input type="text" asp-for="Id" />
+        <input type="text" asp-for="Description" />
+        <input type="text" asp-for="AnotherGuidId" />
+    </form>
+</div>

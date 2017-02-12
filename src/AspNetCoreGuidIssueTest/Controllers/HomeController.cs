@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AspNetCoreGuidIssueTest.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AspNetCoreGuidIssueTest.Controllers
@@ -10,8 +11,22 @@ namespace AspNetCoreGuidIssueTest.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            var test = new Test()
+            {
+                AnotherGuidId = new Guid("4689d77b-a373-450d-a7e6-3394b557ce31")
+            };
+            return View(test);
         }
+
+        public IActionResult Edit(Guid id)
+        {
+            var test = new Test()
+            {
+                AnotherGuidId = id
+            };
+            return View(test);
+        }
+
 
         public IActionResult About()
         {

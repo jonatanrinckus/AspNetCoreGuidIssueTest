@@ -1,4 +1,6 @@
-﻿@{
+﻿@model AspNetCoreGuidIssueTest.Models.Test
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
@@ -106,4 +108,11 @@
             <li><a href="http://go.microsoft.com/fwlink/?LinkID=398609">Publish to Microsoft Azure Web Apps</a></li>
         </ul>
     </div>
+</div>
+<div>
+    <form>
+        <input type="text" asp-for="Id" />
+        <input type="text" asp-for="Description" />
+        <input type="text" asp-for="AnotherGuidId" />
+    </form>
 </div>
